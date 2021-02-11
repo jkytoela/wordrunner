@@ -17,7 +17,7 @@ const Appbar = () => {
 							<ThemeToggle />
 							<Link href="https://github.com/jkytoela/wordrunner">
 								<a>
-									<h1 className="text-indigo-500 dark:text-gray-300 hover:underline">
+									<h1 className="text-indigo-600 dark:text-gray-300 hover:underline">
 										GitHub
 									</h1>
 								</a>

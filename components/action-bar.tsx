@@ -11,6 +11,7 @@ const ActionBar = ({ state, send }: IStateProps) => {
 				<div className="mx-auto px-6 max-w-md h-16 flex items-center justify-around">
 					{isActive ? null : (
 						<button
+							aria-label="show previous word"
 							type="button"
 							className={buttonClass}
 							onClick={() => send('PREVIOUS_WORD')}
@@ -30,6 +31,7 @@ const ActionBar = ({ state, send }: IStateProps) => {
 						</button>
 					)}
 					<button
+						aria-label="toggle play"
 						type="button"
 						className={buttonClass}
 						onClick={() => send(isActive ? 'PAUSE' : 'RUN')}
@@ -61,6 +63,7 @@ const ActionBar = ({ state, send }: IStateProps) => {
 					</button>
 					{isActive ? null : (
 						<button
+							aria-label="show next word"
 							type="button"
 							className={buttonClass}
 							onClick={() => send('NEXT_WORD')}

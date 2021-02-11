@@ -17,6 +17,7 @@ const ThemeToggle = () => {
 
 	return (
 				<button
+					aria-label="toggle theme color"
 					type="button"
 					className="text-gray-500 dark:text-gray-300 text-2xl cursor-pointer focus:outline-none"
 					onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
