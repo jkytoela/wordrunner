@@ -1,10 +1,10 @@
-import { State } from 'xstate'
+import { State, StateNodeConfig } from 'xstate';
 
 export interface WRSchema {
 	states: {
-		setup: {},
-		active: {},
-		paused: {},
+		setup: StateNodeConfig<WRContext, Record<string, unknown>, WREvent>;
+		active: StateNodeConfig<WRContext, Record<string, unknown>, WREvent>;
+		paused: StateNodeConfig<WRContext, Record<string, unknown>, WREvent>;
 	};
 }
 
