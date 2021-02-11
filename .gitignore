@@ -9,4 +9,7 @@ node_modules
 **/public/sw**
 
 # Build dir
-build
+build/*
+
+# Keep the build dir
+!build/.gitkeep
