@@ -1,10 +1,10 @@
-import { State } from 'xstate'
+import { State } from 'xstate';
 
 export interface WRSchema {
 	states: {
-		setup: {},
-		active: {},
-		paused: {},
+		setup: Record<string, unknown>;
+		active: Record<string, unknown>;
+		paused: Record<string, unknown>;
 	};
 }
 

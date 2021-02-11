@@ -12,28 +12,28 @@ export const machine = Machine<WRContext, WRSchema, WREvent>(
 						target: 'setup',
 						actions: assign({
 							words: (_, { value }) => value.split(/\s+/),
-							inputWords: (_, { value }) => value,
-						}),
+							inputWords: (_, { value }) => value
+						})
 					},
 					BEGIN: [{ target: 'paused', cond: 'canBegin' }],
 					CLEAR: [
 						{
 							target: 'setup',
 							cond: 'canBegin',
-							actions: 'clearWords',
-						},
-					],
-				},
+							actions: 'clearWords'
+						}
+					]
+				}
 			},
 			active: {
 				entry: 'nextWord',
 				on: {
 					TICK: [
 						{ target: 'active', cond: 'areWordsLeft' },
-						{ target: 'paused', actions: 'resetIndex' },
+						{ target: 'paused', actions: 'resetIndex' }
 					],
-					PAUSE: 'paused',
-				},
+					PAUSE: 'paused'
+				}
 			},
 			paused: {
 				on: {
@@ -42,44 +42,44 @@ export const machine = Machine<WRContext, WRSchema, WREvent>(
 						{
 							target: 'paused',
 							cond: 'areWordsLeft',
-							actions: 'nextWord',
-						},
+							actions: 'nextWord'
+						}
 					],
 					PREVIOUSWORD: [
 						{
 							target: 'paused',
 							cond: 'canGoBack',
-							actions: 'previousWord',
-						},
+							actions: 'previousWord'
+						}
 					],
 					SET_WPM: {
 						target: 'paused',
 						actions: assign({
-							wordsPerMinute: (_, { wordsPerMinute }) => wordsPerMinute,
-						}),
+							wordsPerMinute: (_, { wordsPerMinute }) => wordsPerMinute
+						})
 					},
 					SETUP: {
 						target: 'setup',
-						actions: 'resetIndex',
-					},
-				},
-			},
-		},
+						actions: 'resetIndex'
+					}
+				}
+			}
+		}
 	},
 	{
 		actions: {
 			nextWord: assign({ currentIndex: (context) => context.currentIndex + 1 }),
 			previousWord: assign({
-				currentIndex: (context) => context.currentIndex - 1,
+				currentIndex: (context) => context.currentIndex - 1
 			}),
 			resetIndex: assign({ currentIndex: (_) => 0 }),
-			clearWords: assign({ inputWords: (_) => '', words: (_) => [] }),
+			clearWords: assign({ inputWords: (_) => '', words: (_) => [] })
 		},
 		guards: {
 			canBegin: (context) => context.words.length > 0,
 			areWordsLeft: (context) =>
 				context.currentIndex < context.words.length - 1,
-			canGoBack: (context) => context.currentIndex > 0,
-		},
+			canGoBack: (context) => context.currentIndex > 0
+		}
 	}
 );
