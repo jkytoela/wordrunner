@@ -10,3 +10,9 @@ body {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
 }
+
+@media (orientation: portrait) {
+	body {
+		position: fixed;
+	}
+}
