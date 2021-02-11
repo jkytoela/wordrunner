@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ThemeToggle from '@/components/theme-toggle';
 
 const Appbar = () => {
 	return (
@@ -7,15 +8,16 @@ const Appbar = () => {
 				<div className="mx-auto px-6 max-w-screen-md h-20 flex items-center justify-between">
 					<Link href="/">
 						<a>
-							<h1 className="font-medium">WordRunner</h1>
+							<h1 className="font-medium dark:text-gray-300 text-gray-900">WordRunner</h1>
 						</a>
 					</Link>
 
 					<nav className="space-x-6 flex items-center">
 						<div className="space-x-6 flex items-center">
+							<ThemeToggle />
 							<Link href="https://github.com/jkytoela/wordrunner">
 								<a>
-									<h1 className="text-indigo-500 dark:text-indigo-400 hover:underline">
+									<h1 className="text-indigo-500 dark:text-gray-300 hover:underline">
 										GitHub
 									</h1>
 								</a>

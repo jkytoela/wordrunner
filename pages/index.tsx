@@ -5,6 +5,7 @@ import { machine } from '@/state-machine/machine';
 import SetWords from '@/components/set-words';
 import CurrentWord from '@/components/current-word';
 import { placeholder } from '@/constants/defaultWords';
+import Appbar from '@/components/appbar';
 
 const Index = () => {
 	const defaultMachine = machine.withContext({
@@ -19,10 +20,11 @@ const Index = () => {
 
 	return (
 		<>
+			<Appbar />
 			<main className="mx-auto pt-8 pb-16 max-w-screen-md w-screen">
 				<div className="p-6">
 					<section className="mt-20">
-						<h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+						<h2 className="text-xl font-semibold text-gray-900 dark:text-gray-300">
 							Read faster. One word at a time.
 						</h2>
 						{isSetup ? (
