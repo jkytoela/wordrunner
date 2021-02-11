@@ -4,7 +4,7 @@
 	"license": "MIT",
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "next build build",
 		"start": "next start",
 		"test": "xo !*.config.js"
 	},

@@ -1,4 +1,4 @@
-import { IStateProps } from '@/types';
+import { IStateProps } from '@/constants/types';
 
 const SetWords = ({ state, send }: IStateProps) => {
 	const { inputWords } = state.context;

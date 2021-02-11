@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Range, getTrackBackground } from 'react-range';
-import { IStateProps } from '@/types';
+import { IStateProps } from '@/constants/types';
 
 const STEP = 5;
 const MIN = 5;

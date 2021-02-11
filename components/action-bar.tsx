@@ -1,4 +1,4 @@
-import { IStateProps } from '@/types';
+import { IStateProps } from '@/constants/types';
 
 const buttonClass =
 	'space-y-1 w-full h-full flex flex-col items-center justify-center cursor-pointer text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50';

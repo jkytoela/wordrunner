@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
+import { IStateProps } from '@/constants/types';
 import WPMSlider from './wpm-slider';
-import { IStateProps } from '@/types';
 
 const CurrentWord = ({ state, send }: IStateProps) => {
 	const { words, currentIndex, wordsPerMinute } = state.context;
