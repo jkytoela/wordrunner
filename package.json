@@ -1,6 +1,6 @@
 {
-	"name": "next-pwa-template",
-	"version": "0.0.0",
+	"name": "wordrunner",
+	"version": "1.0.0",
 	"license": "MIT",
 	"scripts": {
 		"dev": "next dev",
@@ -9,11 +9,14 @@
 		"test": "xo !*.config.js"
 	},
 	"dependencies": {
+		"@xstate/react": "^1.2.2",
 		"next": "10.0.3",
 		"next-pwa": "^5.0.5",
 		"next-themes": "^0.0.10",
 		"react": "17.0.1",
-		"react-dom": "17.0.1"
+		"react-dom": "17.0.1",
+		"react-range": "^1.8.7",
+		"xstate": "^4.16.2"
 	},
 	"devDependencies": {
 		"@types/node": "^14.14.25",
@@ -41,7 +44,8 @@
 			"xo-react"
 		],
 		"rules": {
-			"react/react-in-jsx-scope": "off"
+			"react/react-in-jsx-scope": "off",
+			"react/no-unescaped-entities": "off"
 		}
 	}
 }
