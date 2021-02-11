@@ -8,7 +8,9 @@ const Appbar = () => {
 				<div className="mx-auto px-6 max-w-screen-md h-20 flex items-center justify-between">
 					<Link href="/">
 						<a>
-							<h1 className="font-medium dark:text-gray-300 text-gray-900">WordRunner</h1>
+							<h1 className="font-medium dark:text-gray-300 text-gray-900">
+								WordRunner
+							</h1>
 						</a>
 					</Link>
 

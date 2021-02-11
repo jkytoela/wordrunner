@@ -1,16 +1,18 @@
 <p align="center">
-	<img alt="Rice Bowl" src="public/images/icon-512.png" width="90">
-	<h2 align="center">Next PWA Template</h2>
+	<img alt="WordRunner" src="public/images/icon-512.png" width="90">
+	<h2 align="center">WordRunner</h2>
 </p>
 
-<p align="center">Fluffless app template to inspire less</p>
+<p align="center">I made this project in order to practice TypeScript, get to know XState and create my first PWA!</p>
+
+<p align="center">Although, it's pretty neat how much you can comprehend, despite that you're reading really fast. Imagine how much more you could get done if you completed all of your required reading in 1/3 or 1/5 of the time?</p>
 
 <p align="center">
-	<a href="https://next-pwa-template.now.sh">Live demo</a>
+	<a href="https://wordrunner.netlify.app/">Live demo</a>
 </p>
 
 <p align="center">
-	<a href="https://web.dev/measure">
+	<a href="https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A%2F%2Fwordrunner.netlify.app%2F">
 		<img alt="100% lighthouse scores" src="https://img.shields.io/badge/lighthouse-100%25-845EF7.svg?logo=lighthouse&logoColor=white&style=flat-square" />
 	</a>
 	<a href="https://github.com/xojs/xo">
@@ -18,41 +20,36 @@
 	</a>
 </p>
 
-## Features
+## Tech stack
 
-- ✨ Fluffless PWA using Next 10
-- 🌗 Lovely night/day themes
-- 🦄 Easily removable [nice-to-haves](#use-only-what-you-need)
-- 📱 Native-like mobile experience
-- 📦 Neatly wrapped like that avocado you got for christmas
+- ✔️ <a href="https://github.com/microsoft/TypeScript">TypeScript</a>
+- ✔️ <a href="https://github.com/davidkpiano/xstate">XState</a>
+- ✔️ <a href="https://github.com/tailwindlabs/tailwindcss">Tailwind</a>
+- ✔️ <a href="https://github.com/mvllow/next-pwa-template">PWA using Next 10</a>
 
-## Getting started
+## Basic usage
 
-1. [Use this template](https://github.com/mvllow/next-pwa-template/generate)
-2. Replace `public/images` with your own
-3. Enjoy ✨
+Install
+```sh
+yarn
+```
 
-## Use only what you need
+Run dev
+```sh
+yarn dev
+```
 
-Fluffless doesn't mean "start with nothing". The goal of this template is to be an entry into maintainable apps.
+Build
+```sh
+yarn build
+```
 
-**The essentials**
+Run linter
+```sh
+xo --test
+```
 
-- Typescript, made easy with Next.js
-- [tailwindcss](https://github.com/tailwindlabs/tailwindcss) for utility-first styling
-- [next-pwa](https://github.com/shadowwalker/next-pwa) for offline support
-
-**Nice to haves**
-
-- [next-themes](https://github.com/pacocoursey/next-themes) or similar for low stress theming
-- [XO](https://github.com/xojs/xo) for opinionated eslint + prettier
-
-## Gallery
-
-### Desktop
-
-<img alt="" src="public/images/macos.png" width="500" />
-
-### Mobile
-
-<img alt="" src="public/images/ios.png" width="500" />
+Automagically fix issues
+```sh
+xo --fix
+```

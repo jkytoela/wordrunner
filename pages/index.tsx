@@ -4,7 +4,7 @@ import { useMachine } from '@xstate/react';
 import { machine } from '@/state-machine/machine';
 import SetWords from '@/components/set-words';
 import CurrentWord from '@/components/current-word';
-import { placeholder } from '@/constants/defaultWords';
+import { placeholder } from '@/constants/default-words';
 import Appbar from '@/components/appbar';
 
 const Index = () => {
