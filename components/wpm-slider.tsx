@@ -41,7 +41,7 @@ const WPMSlider = ({ state, send }: IStateProps) => {
 				)}
 				renderThumb={({ props }) => (
 					<div
-						className="flex justify-center align-center py-2 px-3 rounded-md bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-300 shadow-md
+						className="flex justify-center align-center py-2 px-3 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-300 shadow-md
 						focus:outline-none"
 						{...props}
 					>
