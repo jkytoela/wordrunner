@@ -23,9 +23,8 @@ export type WREvent =
 	| { type: 'TICK' }
 	| { type: 'PAUSE' }
 	| { type: 'STOP' }
-	| { type: 'RESET' }
-	| { type: 'PREVIOUSWORD' }
-	| { type: 'NEXTWORD' }
+	| { type: 'PREVIOUS_WORD' }
+	| { type: 'NEXT_WORD' }
 	| { type: 'BEGIN' }
 	| { type: 'CLEAR' };
 

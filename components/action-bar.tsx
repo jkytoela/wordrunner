@@ -13,7 +13,7 @@ const ActionBar = ({ state, send }: IStateProps) => {
 						<button
 							type="button"
 							className={buttonClass}
-							onClick={() => send('PREVIOUSWORD')}
+							onClick={() => send('PREVIOUS_WORD')}
 						>
 							<svg
 								viewBox="0 0 15 15"
@@ -63,7 +63,7 @@ const ActionBar = ({ state, send }: IStateProps) => {
 						<button
 							type="button"
 							className={buttonClass}
-							onClick={() => send('NEXTWORD')}
+							onClick={() => send('NEXT_WORD')}
 						>
 							<svg
 								viewBox="0 0 15 15"

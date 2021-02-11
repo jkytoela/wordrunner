@@ -38,14 +38,14 @@ export const machine = Machine<WRContext, WRSchema, WREvent>(
 			paused: {
 				on: {
 					RUN: 'active',
-					NEXTWORD: [
+					NEXT_WORD: [
 						{
 							target: 'paused',
 							cond: 'areWordsLeft',
 							actions: 'nextWord'
 						}
 					],
-					PREVIOUSWORD: [
+					PREVIOUS_WORD: [
 						{
 							target: 'paused',
 							cond: 'canGoBack',
