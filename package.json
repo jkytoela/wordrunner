@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"license": "MIT",
 	"scripts": {
-		"dev": "NODE_OPTIONS='--inspect' next dev",
+		"dev": "next dev",
 		"build": "next build && next export",
 		"start": "next start",
 		"test": "xo !*.config.js"
