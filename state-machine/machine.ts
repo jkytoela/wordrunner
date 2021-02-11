@@ -1,5 +1,5 @@
-import { Machine, assign } from 'xstate'
-import { WRContext, WRSchema, WREvent } from '@/types'
+import { Machine, assign } from 'xstate';
+import { WRContext, WRSchema, WREvent } from '@/types';
 
 export const machine = Machine<WRContext, WRSchema, WREvent>(
 	{
