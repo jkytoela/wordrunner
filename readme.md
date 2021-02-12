@@ -3,7 +3,7 @@
 	<h2 align="center">WordRunner</h2>
 </p>
 
-<p align="center">I made this project in order to practice TypeScript, get to know XState and create my first PWA!</p>
+<p align="center">I made this project in order to practice TypeScript, get to know XState and create my first PWA. It might be a bit overengineered for such a simple app...</p>
 
 <p align="center">Although, it's pretty neat how much you can comprehend, despite that you're reading really fast. Imagine how much more you could get done if you completed all of your required reading in 1/3 or 1/5 of the time?</p>
 
