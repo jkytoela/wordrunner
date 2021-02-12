@@ -27,6 +27,12 @@
 - ✔️ <a href="https://github.com/tailwindlabs/tailwindcss">Tailwind</a>
 - ✔️ <a href="https://github.com/mvllow/next-pwa-template">PWA using Next 10</a>
 
+## State visualization
+
+<p align="center">
+  <img width="807" height="315" src="public/images/state.png">
+</p>
+
 ## Basic usage
 
 Install
