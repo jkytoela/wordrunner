@@ -20,7 +20,7 @@ const Index = () => {
 
 	return (
 		<>
-			<Appbar />
+			<Appbar state={state} send={send} />
 			<main className="mx-auto pt-8 pb-16 max-w-screen-md w-screen">
 				<div className="p-6">
 					<section className="mt-20">

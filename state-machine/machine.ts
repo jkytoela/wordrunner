@@ -1,5 +1,6 @@
 import { Machine, assign } from 'xstate';
 import { WRContext, WRSchema, WREvent } from '@/constants/types';
+import { assertEventType } from './utils';
 
 export const machine = Machine<WRContext, WRSchema, WREvent>(
 	{
@@ -22,7 +23,10 @@ export const machine = Machine<WRContext, WRSchema, WREvent>(
 							cond: 'canBegin',
 							actions: 'clearWords'
 						}
-					]
+					],
+					SET_WPM: {
+						actions: 'setWpm',
+					}
 				}
 			},
 			active: {
@@ -32,7 +36,10 @@ export const machine = Machine<WRContext, WRSchema, WREvent>(
 						{ target: 'active', cond: 'areWordsLeft' },
 						{ target: 'paused', actions: 'resetIndex' }
 					],
-					PAUSE: 'paused'
+					PAUSE: 'paused',
+					SET_WPM: {
+						actions: 'setWpm',
+					},
 				}
 			},
 			paused: {
@@ -53,10 +60,7 @@ export const machine = Machine<WRContext, WRSchema, WREvent>(
 						}
 					],
 					SET_WPM: {
-						target: 'paused',
-						actions: assign({
-							wordsPerMinute: (_, { wordsPerMinute }) => wordsPerMinute
-						})
+						actions: 'setWpm',
 					},
 					SETUP: {
 						target: 'setup',
@@ -73,7 +77,13 @@ export const machine = Machine<WRContext, WRSchema, WREvent>(
 				currentIndex: (context) => context.currentIndex - 1
 			}),
 			resetIndex: assign({ currentIndex: (_) => 0 }),
-			clearWords: assign({ inputWords: (_) => '', words: (_) => [] })
+			clearWords: assign({ inputWords: (_) => '', words: (_) => [] }),
+			setWpm: assign({
+        wordsPerMinute: (_, event) => {
+          assertEventType(event, 'SET_WPM');
+          return event.value;
+        },
+      }),
 		},
 		guards: {
 			canBegin: (context) => context.words.length > 0,

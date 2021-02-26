@@ -18,7 +18,7 @@ export interface WRContext {
 export type WREvent =
 	| { type: 'SETUP' }
 	| { type: 'SET_WORDS'; value: string }
-	| { type: 'SET_WPM'; wordsPerMinute: number[] }
+	| { type: 'SET_WPM'; value: number[] }
 	| { type: 'RUN' }
 	| { type: 'TICK' }
 	| { type: 'PAUSE' }

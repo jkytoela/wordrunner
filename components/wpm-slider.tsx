@@ -18,7 +18,7 @@ const WPMSlider = ({ state, send }: IStateProps) => {
 				rtl={false}
 				renderTrack={({ props, children }) => (
 					<div
-						className="flex h-8 w-10/12"
+						className="flex h-8 w-full"
 						style={props.style}
 						onMouseDown={props.onMouseDown}
 						onTouchStart={props.onTouchStart}
@@ -51,7 +51,7 @@ const WPMSlider = ({ state, send }: IStateProps) => {
 						</p>
 					</div>
 				)}
-				onChange={(wordsPerMinute) => send('SET_WPM', { wordsPerMinute })}
+				onChange={(values) => send('SET_WPM', { value: values })}
 			/>
 		</div>
 	);
